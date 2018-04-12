@@ -3,49 +3,24 @@
 //Aaron Wessley
 
 #include <iostream>
+#include <stdio.h>
+#include <math.h>
 
-int trianglePerimeter(double A, double B, double C)
-{
-	double perimeter;
-	perimeter = (A + B + C);
-	return perimeter;
-}
-
-int triangleArea(double height, double base)
-{
-	double area;
-	area = (base * height) / 2;
-	return area;
-}
-
-int trianglehypotenuse(double sideA, double sideB)
-{
-	double sideC;
-	sideC = sqrt(sideA) + sqrt(sideB);
-	return sideC;
-}
+double returnValue;
 
 int main()
 {
-	double lengthSideA = 0;
-	double lengthSideB = 0;
-	double lengthSideC = 0;
-	double area, perimeter, hypotenuse, height;
+	double sideA, sideB, sideC;
+	double hypotenuse, perimeter;
 
-	std::cout << "Enter the length of side A" << std::endl;
-	std::cin >> lengthSideA;
+	std::cout << "side A:" << std::endl;
+	std::cin >> sideA;
+	std::cout << "Side B:" << std::endl;
+	std::cin >> sideB;
 
-	std::cout << "Enter the length of side B" << std::endl;
-	std::cin >> lengthSideB;
+	hypotenuse; //finish these lines
+	perimeter;
 
-	hypotenuse = sqrt(lengthSideA) + sqrt(lengthSideB);
-	perimeter = trianglePerimeter(lengthSideA, lengthSideB, hypotenuse);
-	area = (lengthSideA / 2);
-	
-
-	std::cout << "Hypotenuse: " << hypotenuse << std::endl;
-	std::cout << "Perimeter: " << perimeter << std::endl;
-	std::cout << "Area: " << area << std::endl;
 
 	system("pause");
 	return 0;
