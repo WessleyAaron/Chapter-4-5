@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
+
+using namespace std;
 
 void printMenu()
 {
@@ -13,7 +16,6 @@ void printMenu()
 
 int main()
 {
-
 	double tacoPrice = 0.99;
 	double burritoPrice = 1.99;
 	double drinkPrice = 0.99;
@@ -21,12 +23,12 @@ int main()
 	std::string userChoice;
 	int done;
 	double tacoNumber = 0, burritoNumber = 0, drinkNumber = 0, tacoTotal = 0, burritoTotal = 0, drinkTotal = 0, total = 0, totalWithTax = 0;
-	
+
 	printMenu();
 
 	do
 	{
-		std::cout << "Welcome to Delgados Tacos. What item would you like to order?" << std::endl;
+		std::cout << "\nWelcome to Delgados Tacos. What item would you like to order?" << std::endl;
 		std::cin >> userChoice;
 
 		if (userChoice == "Tacos" || userChoice == "tacos" || userChoice == "Taco" || userChoice == "taco")
@@ -64,6 +66,9 @@ int main()
 
 	total = tacoTotal + burritoTotal + drinkTotal;
 	totalWithTax = total * taxRate;
+
+	std::cout << std::fixed << std::showpoint;
+	std::cout << std::setprecision(2);
 
 	std::cout << "You ordered " << tacoNumber << " tacos, " << burritoNumber << " burritos, and " << drinkNumber << " drinks" << std::endl;
 	std::cout << "Your total is $" << total << " before tax and $" << totalWithTax << " after tax" << std::endl;

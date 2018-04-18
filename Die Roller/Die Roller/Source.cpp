@@ -6,6 +6,7 @@
 #include <string>
 #include <time.h>
 #include <random>
+#include <iomanip>
 
 typedef std::string newString;
 int rolledNumber;
@@ -28,6 +29,10 @@ int main()
 
 	do
 	{
+
+		std::cout << std::fixed << std::showpoint;
+		std::cout << std::setprecision(2);
+
 		std::cout << "How much would you like to bet?" << std::endl;
 		std::cin >> bettingAmount;
 

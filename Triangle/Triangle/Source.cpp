@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#include <iomanip>
 
 int main()
 {
@@ -13,6 +14,10 @@ int main()
 
 	do
 	{
+
+		std::cout << std::fixed << std::showpoint;
+		std::cout << std::setprecision(2);
+
 		std::cout << "What triangle do you want to solve for? right, isosceles, or equilateral?" << std::endl;
 		std::cin >> userInputTriangleShape;
 

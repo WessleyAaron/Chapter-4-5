@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 void printMenu()
 {
@@ -26,6 +27,9 @@ int main()
 	double total;
 	double totalWithTax;
 
+	std::cout << std::fixed << std::showpoint;
+	std::cout << std::setprecision(2);
+
 	std::cout << "Welcome to Luigi's stereotypical pizza joint!" << std::endl;
 
 	printMenu();
@@ -33,7 +37,6 @@ int main()
 	std::cout << "What size of pizza would you like?\n[1] for small\n[2] for medium\n[3] for large" << std::endl;
 	std::cin >> pizzaSize;
 	
-
 	if (pizzaSize == 1) //small
 	{
 		std::cout << "You chose a small pizza. The price is $" << pizzaSmall << ". What toppings would you like?"
